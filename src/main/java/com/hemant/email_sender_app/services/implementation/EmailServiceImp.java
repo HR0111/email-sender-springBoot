@@ -127,7 +127,7 @@ public class EmailServiceImp implements EmailService {
             javaMailSender.send(mimeMessage);
 
 
-            logger.info("sent email FIleee content");
+            logger.info("sent email FIleee content including inpustream");
 
         } catch (MessagingException e) {
             throw new RuntimeException(e);
