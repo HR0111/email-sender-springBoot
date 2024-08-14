@@ -13,7 +13,8 @@ target/
 .springBeans
 .sts4-cache
 
-application.properties
+# Ignore application.properties to protect sensitive configuration
+src/main/resources/application.properties
 
 ### IntelliJ IDEA ###
 .idea
