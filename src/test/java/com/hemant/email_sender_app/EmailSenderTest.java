@@ -1,6 +1,7 @@
 package com.hemant.email_sender_app;
 
 
+import com.hemant.email_sender_app.helper.Message;
 import com.hemant.email_sender_app.services.EmailService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.List;
 
 @SpringBootTest
 public class EmailSenderTest {
@@ -43,5 +45,16 @@ public class EmailSenderTest {
         }
 
 
+    }
+
+    @Test
+    void getInbox(){
+        List<Message> inboxMessage = emailService.getInboxMessages();
+        inboxMessage.forEach(item->{
+            System.out.println(item.getSubjects());
+            System.out.println(item.getContent());
+            System.out.println(item.getFiles());
+            System.out.println("____________");
+        });
     }
 }
