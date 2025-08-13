@@ -153,6 +153,13 @@ Cancelling already started leave
 Cancelling leave starting today
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Scaling Strategy (50 → 500 Employees) 
+
+Horizontal Scaling: Add multiple stateless Spring Boot instances behind a load balancer to handle more concurrent users. 
+Vertical Scaling: Increase server CPU, RAM, and storage to improve performance for existing instances. 
+Caching & Indexing: Use Redis for frequently accessed data and add database indexes on key columns to reduce query time. 
+Load Balancer: Distribute incoming traffic evenly across application instances to prevent overload and ensure high availability.
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
@@ -217,6 +224,8 @@ Communication
 Performance
  Redis caching
  Database indexing
+
+
 
 
 
